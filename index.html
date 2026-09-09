@@ -38,7 +38,7 @@
 
       try {
         if (typeof operations[operation] !== 'function') {
-          throw new Error('The selected operation script is not loaded. Run npm run build.');
+          throw new Error('The selected operation script is not loaded');
         }
 
         document.getElementById('result').textContent = operations[operation](a, b);
