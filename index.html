@@ -30,7 +30,19 @@
       var operation = document.getElementById('operation').value;
 
       try {
-        document.getElementById('result').textContent = window[operation](a, b);
+        switch (operation) {
+          case 'subtract':
+            document.getElementById('result').textContent = subtract(a, b);
+            break;
+          case 'multiply':
+            document.getElementById('result').textContent = multiply(a, b);
+            break;
+          case 'divide':
+            document.getElementById('result').textContent = divide(a, b);
+            break;
+          default:
+            document.getElementById('result').textContent = sum(a, b);
+        }
       } catch (error) {
         document.getElementById('result').textContent = error.message;
       }
